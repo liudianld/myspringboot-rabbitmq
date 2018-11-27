@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: 118.24.250.177
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true

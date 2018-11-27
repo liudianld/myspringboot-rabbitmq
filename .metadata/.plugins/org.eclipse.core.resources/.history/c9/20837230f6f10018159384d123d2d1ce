@@ -1,0 +1,8 @@
+package com.liudian.rabbitmq;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Sender {
+	
+}

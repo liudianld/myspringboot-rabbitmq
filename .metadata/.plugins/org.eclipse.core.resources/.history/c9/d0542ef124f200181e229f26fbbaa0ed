@@ -1,0 +1,5 @@
+rabbitmq.exchange=log.topic
+
+rabbitmq.queueInfo=log.info
+rabbitmq.queueError=log.error
+rabbitmq.queueLogs=log

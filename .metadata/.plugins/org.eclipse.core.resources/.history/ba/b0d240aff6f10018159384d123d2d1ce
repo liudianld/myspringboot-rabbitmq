@@ -1,0 +1,11 @@
+package com.liudian.rabbitmq;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Recevier {
+
+	public void process(String msg) {
+		System.out.println("recevier: " + msg);
+	}
+}

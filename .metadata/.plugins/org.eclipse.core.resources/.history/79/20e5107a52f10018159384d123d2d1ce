@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    addresses: 192.168.221.128:5672
+    username: admin
+    password: admin
+    virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true

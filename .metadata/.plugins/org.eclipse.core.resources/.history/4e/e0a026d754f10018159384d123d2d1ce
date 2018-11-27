@@ -1,0 +1,24 @@
+package com.liudian.springboot.producer;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.liudian.springboot.entity.Order;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		OrderSender orderSender = new OrderSender();
+		Order order = new Order();
+		order.setId("20181126000001");
+		order.setName("测试订单1");
+		order.setMessageId(System.currentTimeMillis() + "$" + UUID.randomUUID().toString());
+		try {
+			orderSender.send(order);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

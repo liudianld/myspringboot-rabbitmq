@@ -1,0 +1,23 @@
+package com.liudian.rabbitmq;
+
+import java.util.Date;
+
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Sender {
+	
+	@Autowired
+	private AmqpTemplate rabbitmqTemplate;
+	
+	@Value("${mq.config.exchange}")
+	private String exchange;
+	
+	public void send() throws Exception{
+		String msg = "hello world, lidian!" + new Date();
+		this.rabbitmqTemplate.convertAndSend(this.exchange, "log.info.routing.key", msg);
+	}
+}

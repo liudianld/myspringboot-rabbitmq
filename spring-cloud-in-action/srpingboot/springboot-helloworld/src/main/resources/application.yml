@@ -1,0 +1,7 @@
+server: 
+  port: 8080
+
+liudian: 
+  num: ${random.int}
+  liudian.hello: hi,liudian!
+  liudian.msg: liudian say hello world! ${liudian.hello}   ${liudian.num}

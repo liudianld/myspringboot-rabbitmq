@@ -1,0 +1,28 @@
+package com.liudian.springboot.controller;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.liudian.springboot.entity.Order;
+import com.liudian.springboot.producer.OrderSender;
+
+@RestController
+public class Test {
+	
+	@Autowired
+	private OrderSender orderSender;
+	
+	@RequestMapping(value = "/test")
+	@ResponseBody
+	public void testSend1() throws Exception{
+		Order order = new Order();
+		order.setId("20181126000001");
+		order.setName("测试订单1");
+		order.setMessageId(System.currentTimeMillis() + "$" + UUID.randomUUID().toString());
+		orderSender.send(order);
+	}
+}

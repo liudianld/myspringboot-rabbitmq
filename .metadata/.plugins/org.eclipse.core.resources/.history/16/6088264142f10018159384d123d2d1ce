@@ -1,0 +1,18 @@
+package com.liudian.springboot.producer;
+
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.liudian.springboot.entity.Order;
+
+@Component
+public class OrderSender {
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+	
+	public void sendOrder(Order order) {
+		
+	}
+}
