@@ -15,11 +15,9 @@ import com.liudian.rabbitmq.config.RabbitmqConfig;
 @EnableConfigurationProperties(RabbitmqConfig.class)
 @RabbitListener(
 		bindings = @QueueBinding(
-				value = @Queue(value = "${rabbitmq.queueError}", autoDelete = "true"), 
-				exchange = @Exchange(value = "${rabbitmq.exchange}", type = ExchangeTypes.TOPIC), 
-				key = "*.log.error"
-				)
-		)
+			value = @Queue(value = "${rabbitmq.queueError}", autoDelete = "true"), 
+			exchange = @Exchange(value = "${rabbitmq.exchange}", type = ExchangeTypes.TOPIC), 
+			key = "*.log.error"))
 public class ErrorRecevier {
 
 	@RabbitHandler

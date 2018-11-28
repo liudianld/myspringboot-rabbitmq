@@ -13,10 +13,11 @@ import com.liudian.rabbitmq.config.RabbitmqConfig;
 
 @Component
 @EnableConfigurationProperties(RabbitmqConfig.class)
-@RabbitListener(bindings = @QueueBinding(
-		value = @Queue(value = "${rabbitmq.queueLogs}", autoDelete="true"),
-		exchange = @Exchange(value = "${rabbitmq.exchange}", type=ExchangeTypes.TOPIC),
-		key = "*.log.*"))
+@RabbitListener(
+		bindings = @QueueBinding(
+			value = @Queue(value = "${rabbitmq.queueLogs}", autoDelete="true"),
+			exchange = @Exchange(value = "${rabbitmq.exchange}", type=ExchangeTypes.TOPIC),
+			key = "*.log.*"))
 public class LogsRecevier {
 
 	@RabbitHandler

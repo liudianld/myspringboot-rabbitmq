@@ -1,5 +1,6 @@
 package com.liudian.springboot.helloworld.exception;
 
+@SuppressWarnings("serial")
 public class BusinessException extends RuntimeException {
 	private String code;
 	private String msg;
