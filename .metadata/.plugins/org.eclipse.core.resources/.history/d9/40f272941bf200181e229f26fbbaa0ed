@@ -1,7 +1,0 @@
-mq.config.exchange=log.direct
-
-mq.config.queue.info=log.info
-mq.config.queue.info.routing.key=log.info.routing.key
-
-mq.config.queue.error=log.error
-mq.config.queue.info.routing.key=log.error.routing.key

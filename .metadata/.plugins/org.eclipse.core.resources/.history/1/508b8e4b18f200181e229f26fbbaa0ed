@@ -1,5 +1,0 @@
-package com.liudian.rabbitmq.config;
-
-public class RabbitmqConfig {
-
-}

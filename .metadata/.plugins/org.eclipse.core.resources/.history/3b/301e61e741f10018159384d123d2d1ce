@@ -1,5 +1,0 @@
-package com.liudian.springboot.producer;
-
-public class OrderSender {
-
-}

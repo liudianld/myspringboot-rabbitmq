@@ -1,7 +1,0 @@
-rabbitmq.exchange=log.direct
-
-rabbitmq.queueInfo=log.info
-rabbitmq.routing.key=log.info.routing.key
-
-mq.config.queue.error=log.error
-mq.config.queue.info.routing.key=log.error.routing.key

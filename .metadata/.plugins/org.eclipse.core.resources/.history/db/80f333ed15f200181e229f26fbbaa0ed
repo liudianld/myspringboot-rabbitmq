@@ -1,25 +1,0 @@
-spring:
-  rabbitmq:
-    addresses: 118.24.250.177
-    port: 5672
-    username: root
-    password: root
-    virtual-host: /
-    publisher-confirms: true
-    publisher-returns: true
-    connection-timeout: 15000
-    template:
-      mandatory: true
-  http:    encoding:      charset: UTF-8
-  jackson:    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    default-property-inclusion: non-null
-
-server: 
-  port: 8080
-  servlet:    path: /
-
-#设置交换机名字
-mq: 
-  config: 
-    exchange: 

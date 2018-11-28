@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;InfoRecevier.java&apos; to &apos;springboot-rabbitmq-topic-consumer/src/main/java/com.liudian.rabbitmq&apos;&#x0D;&#x0A;- Original project: &apos;springboot-rabbitmq-topic-consumer&apos;&#x0D;&#x0A;- Destination element: &apos;springboot-rabbitmq-topic-consumer/src/main/java/com.liudian.rabbitmq&apos;&#x0D;&#x0A;- Original element: &apos;com.liudian.rabbitmq.InfoRecevier.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;com.liudian.rabbitmq" element1="/src\/main\/java&lt;com.liudian.rabbitmq{InfoRecevier.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1543309519047" units="1" version="1.0"/>
-</session>
