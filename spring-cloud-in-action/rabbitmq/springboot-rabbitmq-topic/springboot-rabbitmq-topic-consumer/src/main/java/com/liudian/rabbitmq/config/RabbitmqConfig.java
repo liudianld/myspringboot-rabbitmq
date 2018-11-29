@@ -17,6 +17,7 @@ public class RabbitmqConfig {
 	private String queueError;
 	private String queueErrorRoutingKey;
 	private String queueLogs;
+	private String queueOrder;
 
 	public String getExchange() {
 		return exchange;
@@ -64,6 +65,14 @@ public class RabbitmqConfig {
 
 	public void setQueueLogs(String queueLogs) {
 		this.queueLogs = queueLogs;
+	}
+
+	public String getQueueOrder() {
+		return queueOrder;
+	}
+
+	public void setQueueOrder(String queueOrder) {
+		this.queueOrder = queueOrder;
 	}
 
 }

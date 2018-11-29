@@ -11,11 +11,23 @@ spring:
     template:
       mandatory: true
   http:    encoding:      charset: UTF-8
+#关闭缓存及时刷新
+  thymeleaf:    cache: true
+#热部署生效
+  devtools:    restart:      enabled: true
+      additional-paths: src/main
   jackson:    date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non-null
+  datasource:    url: jdbc:postgresql://localhost:5432/springboot_mybatis?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.postgresql.Driver
 
 server: 
   port: 8080
   servlet:    path: /
 
+mybatis:  type-aliases-package: com.liudian.rabbitmq
+  mapper-locations: mapping/*.xml

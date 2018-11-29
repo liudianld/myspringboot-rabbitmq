@@ -8,20 +8,20 @@ import org.springframework.stereotype.Component;
 
 import com.liudian.rabbitmq.config.RabbitmqConfig;
 
-@Component
-@EnableConfigurationProperties(RabbitmqConfig.class)
+//@Component
+//@EnableConfigurationProperties(RabbitmqConfig.class)
 public class UserSender {
 	
-	@Autowired
-	private AmqpTemplate rabbitmqTemplate;
-	
-	@Value("${rabbitmq.exchange}")
-	private String exchange;
-	
-	public void send() throws Exception{
-		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.debug", "--------->user.log.debug");
-		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.info", "--------->user.log.info");
-		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.warn", "--------->user.log.warn");
-		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.error", "--------->user.log.error");
-	}
+//	@Autowired
+//	private AmqpTemplate rabbitmqTemplate;
+//	
+//	@Value("${rabbitmq.exchange}")
+//	private String exchange;
+//	
+//	public void send() throws Exception{
+//		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.debug", "--------->user.log.debug");
+//		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.info", "--------->user.log.info");
+//		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.warn", "--------->user.log.warn");
+//		this.rabbitmqTemplate.convertAndSend(this.exchange, "user.log.error", "--------->user.log.error");
+//	}
 }

@@ -12,16 +12,16 @@ import org.springframework.stereotype.Component;
 import com.liudian.rabbitmq.config.RabbitmqConfig;
 
 @Component
-@EnableConfigurationProperties(RabbitmqConfig.class)
-@RabbitListener(
-		bindings = @QueueBinding(
-			value = @Queue(value = "${rabbitmq.queueInfo}", autoDelete="true"),
-			exchange = @Exchange(value = "${rabbitmq.exchange}", type=ExchangeTypes.TOPIC),
-			key = "*.log.info"))
+//@EnableConfigurationProperties(RabbitmqConfig.class)
+//@RabbitListener(
+//		bindings = @QueueBinding(
+//			value = @Queue(value = "${rabbitmq.queueInfo}", autoDelete="true"),
+//			exchange = @Exchange(value = "${rabbitmq.exchange}", type=ExchangeTypes.TOPIC),
+//			key = "*.log.info"))
 public class InfoRecevier {
 
-	@RabbitHandler
-	public void process(String msg) {
-		System.out.println("infoRecevier---------->" + msg);
-	}
+//	@RabbitHandler
+//	public void process(String msg) {
+//		System.out.println("infoRecevier---------->" + msg);
+//	}
 }
